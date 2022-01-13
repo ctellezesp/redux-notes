@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-input {
+	width: 95%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+	padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.notes {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.note {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	padding: 10px 10px 30px 10px;
+	background-color: #ebe12f;
+	color: #000000;
+	border-radius: 5px;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-title {
+	font-size: 2em;
+	margin: 10px 0;
+}
+
+.note-description {
+	width: 100%;
+	display: block;
+	word-wrap: break-word;
+}
+
+.note-icons {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.note-icon {
+	cursor: pointer;
 }
